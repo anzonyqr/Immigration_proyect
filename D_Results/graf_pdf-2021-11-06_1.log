@@ -1,0 +1,415 @@
+-------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\D_Results/graf_pdf-2021-11-06_1.log
+  log type:  text
+ opened on:   6 Nov 2021, 10:31:17
+
+.         local today "`c(current_time)'"
+
+.         local curdir "`c(pwd)'"
+
+.         local newn = c(N) + 1
+
+. 
+. ********************************************************************************
+. *** PART 2: Cleaning border_data_1992-2019_11_5
+. *******************************************************************************/
+.         
+.         cd "${A}"
+C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\A_MicroData
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+end of do-file
+
+. br
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+
+.         label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) ytitle("Total Mile
+> s Constructed") title("Figure 1: Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlab
+> el(,labsize(2.3)) 
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(note: file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png not found)
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use "C:\Users\MIGUEL\Dropbox\RA\Inmigration\A_MicroData\border_data_1992-2019_11_5.dta", clea
+> r
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) 
+
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(note: file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png not found)
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. 
+.         use "C:\Users\MIGUEL\Dropbox\RA\Inmigration\A_MicroData\border_data_1992-2019_11_5.dta", clea
+> r
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(2.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")
+
+.         xtitle("Year")
+command xtitle is unrecognized
+r(199);
+
+end of do-file
+
+r(199);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(2.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year")
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use "C:\Users\MIGUEL\Dropbox\RA\Inmigration\A_MicroData\border_data_1992-2019_11_5.dta", clea
+> r
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(2.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year")
+
+.         
+.         graph export "${F}\Figura_N°4_1.png", replace
+(note: file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_1.png not found)
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_1.png written in PNG fo
+> rmat)
+
+.         graph save Figura_N°4_1 , replace 
+(note: file Figura_N°4_1.gph not found)
+(file Figura_N°4_1.gph saved)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         twoway line death100000 year if fence == 0 ||line death100000 year if fence == 1 ,  ylabel(,l
+> absize(2.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) 
+
+.         ytitle("Deaths x 10000 Apprehensions") xtitle("Year")
+command ytitle is unrecognized
+r(199);
+
+end of do-file
+
+r(199);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         twoway line death100000 year if fence == 0 ||line death100000 year if fence == 1 ,  ylabel(,l
+> absize(2.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths x 10000 Apprehensions") xtitle("
+> Year")
+
+.         
+.         graph export "${F}\Figura_N°4_2.png"", replace
+invalid '", replace' 
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. 
+.         twoway line death100000 year if fence == 0 ||line death100000 year if fence == 1 ,  ylabel(,l
+> absize(2.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths x 10000 Apprehensions") xtitle("
+> Year")
+
+.         
+.         graph export "${F}\Figura_N°4_2.png", replace
+(note: file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_2.png not found)
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_2.png written in PNG fo
+> rmat)
+
+.         graph save Figura_N°4_2 , replace 
+(note: file Figura_N°4_2.gph not found)
+(file Figura_N°4_2.gph saved)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. *Unir los datos*
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph" 
+
+.         graph export "${F}\Figura_N°4_total.png" , replace 
+(note: file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_total.png not fou
+> nd)
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_total.png written in PN
+> G format)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. ********************************************************************************
+. *** PART 1: Introduction
+.     *--------------------------------------------------
+.     * 1.1 Program Setup
+.     *--------------------------------------------------
+.                 clear all
+
+.                 set more off
+
+.                 pause on
+
+. 
+.                 if "`c(username)'" == "MIGUEL" {
+.                         global path "C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect"
+.                 }
+
+. 
+.     *--------------------------------------------------
+.     * 1.2 Globals
+.     *--------------------------------------------------  
+.         
+.                 set matsize 11000
+set matsize ignored.
+    Matrix sizes are no longer limited by c(matsize) in modern Statas.  Matrix sizes are now limited
+    by flavor of Stata.  See limits for more details.
+
+. 
+.                 //Change
+.                 global dofilename "graf_pdf"
+
+. 
+.                 global A "${path}\A_MicroData"
+
+.                 global B "${path}\B_RawData"
+
+.                 global D "${path}\D_Results"
+
+.                 global E "${path}\E_Tables"
+
+.                 global F "${path}\F_Figures"
+
+. 
+. 
+. 
+. 
+. ********************************************************************************
+. *** PART 2: Cleaning border_data_1992-2019_11_5
+. *******************************************************************************/
+.         
+.         cd "${A}"
+C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\A_MicroData
+
+.         
+.         use border_data_1992-2019_11_5, clear
+
+. 
+. 
+. *** FIGURE N°1 ***
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+
+.         label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) ytitle("Total Mile
+> s Constructed") title("Figure 1: Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlab
+> el(,labsize(2.3)) 
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+. 
+. *** FIGURE N°2 ***
+. 
+.         use "C:\Users\MIGUEL\Dropbox\RA\Inmigration\A_MicroData\border_data_1992-2019_11_5.dta", clea
+> r
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) 
+
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+. 
+. *** FIGURE N°4 ***
+. 
+.         use "C:\Users\MIGUEL\Dropbox\RA\Inmigration\A_MicroData\border_data_1992-2019_11_5.dta", clea
+> r
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(2.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year")
+
+.         
+.         graph export "${F}\Figura_N°4_1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_1.png written in PNG fo
+> rmat)
+
+.         graph save Figura_N°4_1 , replace 
+(file Figura_N°4_1.gph saved)
+
+. 
+.         twoway line death100000 year if fence == 0 ||line death100000 year if fence == 1 ,  ylabel(,l
+> absize(2.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths x 10000 Apprehensions") xtitle("
+> Year")
+
+.         
+.         graph export "${F}\Figura_N°4_2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_2.png written in PNG fo
+> rmat)
+
+.         graph save Figura_N°4_2 , replace 
+(file Figura_N°4_2.gph saved)
+
+. 
+. *Unir los datos*
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph" 
+
+.         graph export "${F}\Figura_N°4_total.png" , replace 
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_total.png written in PN
+> G format)
+
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+. 
+end of do-file
+
