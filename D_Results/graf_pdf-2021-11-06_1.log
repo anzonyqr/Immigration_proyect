@@ -413,3 +413,3500 @@ C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\A_MicroData
 . 
 end of do-file
 
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) title("Figure 2: County-level ratio of b
+> arrier to US-Mexico border by barrier type")
+
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) title("My title" "Second line")
+
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) title("My title" "first line")
+
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) 
+
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) title("hola")
+
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) title("Third line", suffix)
+
+. 
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) 
+
+. 
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) title("hola",7)
+option 7 not allowed
+r(198);
+
+end of do-file
+
+r(198);
+
+. help ringposstyle
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. 
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) title("hola",ring(7))
+
+. 
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) title("hola",ring(4))
+
+. 
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) title("hola",ring(0))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) title("hola",ring(2))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. 
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) 
+
+. 
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(2.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(lab(1 "Males") lab(2
+>  "Females"))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(2.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") 
+
+.         ****legend(lab(1 "Males") lab(2 "Females"))
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+variable total_primary not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+
+.         label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) ytitle("Total Mile
+> s Constructed") title("Figure 1: Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlab
+> el(,labsize(2.3)) legend(lab(1 "Males") lab(2 "Females") lab(3 "ffff"))
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+
+.         label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) ytitle("Total Mile
+> s Constructed") title("Figure 1: Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlab
+> el(,labsize(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "total_
+> tertiary"))
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+
+.         label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) ytitle("Total Mile
+> s Constructed") title("Figure 1: Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlab
+> el(,labsize(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicl
+> e_barrier_Permanent"))
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) ytitle("Total Mile
+> s Constructed") title("Figure 1: Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlab
+> el(,labsize(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicl
+> e_barrier_Permanent"))
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+
+.         label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) 
+
+. 
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(legend(lab(1 "Total Barrier/Total Border") lab(2 "Te
+> mp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border"))size(*0.7)) 
+option legend() not allowed
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(legend(lab(1 "Total Barrier/Total Border") lab(2 "Te
+> mp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border")),size(*0.7)) 
+invalid 'size' 
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) (legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp Veh
+> icle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border")),size(*0.7)) 
+invalid something: unmatched close parenthesis or bracket
+
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp Vehi
+> cle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border")),size(*0.7)) 
+invalid something: unmatched close parenthesis or bracket
+
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp Vehi
+> cle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border"),size(*0.7)) 
+invalid 'size' 
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp Vehi
+> cle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. 
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name) yl
+> abel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp Vehi
+> cle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) note("") 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name ,  
+> note("") ) ylabel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab
+> (2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) note("
+> ") 
+
+. 
+end of do-file
+
+.   ssc install moremata       , replace 
+checking moremata consistency and verifying not already installed...
+connection timed out -- see help r(2) for troubleshooting
+could not copy http://fmwww.bc.edu/repec/bocode/m/mf_mm_nunique.hlp
+(no action taken)
+r(2);
+
+. 
+.   ssc install mplotoffset    , replace 
+checking mplotoffset consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install center       , replace
+checking center consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install ranktest       , replace 
+checking ranktest consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install mdesc        , replace
+checking mdesc consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install blindschemes   , replace
+checking blindschemes consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install xsvmat         , replace
+checking xsvmat consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install spmap        , replace
+checking spmap consistency and verifying not already installed...
+all files already exist and are up to date.
+
+. 
+.   ssc install shp2dta        , replace
+checking shp2dta consistency and verifying not already installed...
+all files already exist and are up to date.
+
+. 
+.   net install smileplot.pkg  , replace
+checking smileplot consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install ivreghdfe      , replace
+checking ivreghdfe consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install ivreg2         , replace 
+connection timed out -- see help r(2) for troubleshooting
+could not load ivreg2.pkg from http://fmwww.bc.edu/repec/bocode/i/
+r(2);
+
+. 
+.   ssc install coefplot       , replace 
+checking coefplot consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install egenmore       , replace 
+checking egenmore consistency and verifying not already installed...
+connection timed out -- see help r(2) for troubleshooting
+could not copy http://fmwww.bc.edu/repec/bocode/_/_gbomd.ado
+(no action taken)
+r(2);
+
+. 
+.   ssc install texdoc       , replace 
+checking texdoc consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install texify       , replace 
+checking texify consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install groups       , replace 
+checking groups consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install charlist       , replace
+checking charlist consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install vmerge         , replace 
+checking vmerge consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install winsor2        , replace 
+checking winsor2 consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install palettes       , replace 
+checking palettes consistency and verifying not already installed...
+connection timed out -- see help r(2) for troubleshooting
+could not copy http://fmwww.bc.edu/repec/bocode/c/colorpalette.sthlp
+(no action taken)
+r(2);
+
+. 
+.   ssc install fsum           , replace 
+checking fsum consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install splitvallabels , replace
+checking splitvallabels consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install reghdfe        , replace 
+checking reghdfe consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install ivreghdfe      , replace 
+connection timed out -- see help r(2) for troubleshooting
+http://fmwww.bc.edu/repec/bocode/i/ either
+  1)  is not a valid URL, or
+  2)  could not be contacted, or
+  3)  is not a Stata download site (has no stata.toc file).
+
+current site is still http://fmwww.bc.edu/repec/bocode/r/
+r(2);
+
+. 
+.   ssc install ftools         , replace 
+checking ftools consistency and verifying not already installed...
+connection timed out -- see help r(2) for troubleshooting
+could not copy http://fmwww.bc.edu/repec/bocode/m/ms_parse_vce.ado
+(no action taken)
+r(2);
+
+. 
+.   ssc install matchit        , replace
+checking matchit consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install freqindex      , replace
+checking freqindex consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install mergepoly      , replace 
+checking mergepoly consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.   ssc install sreshape       , replace
+ssc install: "sreshape" not found at SSC, type search sreshape
+(To find all packages at SSC that start with s, type ssc describe s)
+r(601);
+
+. 
+.   
+. 
+.   net install grc1leg2       , from("http://digital.cgdev.org/doc/stata/MO/Misc")
+checking grc1leg2 consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+. 
+.  
+. 
+.   set more off             , permanently
+(set more preference recorded)
+
+. 
+.   set scheme plotplainblind  , permanently
+(set scheme preference recorded)
+
+. 
+.   set matsize 11000        , permanently
+(set matsize preference recorded)
+set matsize ignored.
+    Matrix sizes are no longer limited by c(matsize) in modern Statas.  Matrix sizes are now limited
+    by flavor of Stata.  See limits for more details.
+
+. 
+.   set maxvar  32767        , permanently
+no; dataset in memory has changed since last saved
+r(4);
+
+. 
+.   
+. 
+.   graph set window fontface "Garamond"
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. 
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid longdash_dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) ytitle("T
+> otal Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlabe
+> l(,labsize(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicle
+> _barrier_Permanent"))
+(note:  named style sky not found in class color, default attributes used)
+(note:  named style sky not found in class color, default attributes used)
+(note:  named style sky not found in class color, default attributes used)
+(note:  named style sky not found in class color, default attributes used)
+(note:  named style sky not found in class color, default attributes used)
+(note:  named style reddish not found in class color, default attributes used)
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) ytitle("Total Mile
+> s Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlabel(,labsiz
+> e(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicle_barrier_
+> Permanent"))
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) ytitle("Total Mile
+> s Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlabel(,labsiz
+> e(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicle_barrier_
+> Permanent"))
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) ytitle("Total Mile
+> s Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlabel(,labsiz
+> e(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicle_barrier_
+> Permanent"))
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid longdash_dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) ytitle("T
+> otal Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlabe
+> l(,labsize(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicle
+> _barrier_Permanent"))
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) ytitle("
+> Total Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlab
+> el(,labsize(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicl
+> e_barrier_Permanent"))
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , solid lcolor(red)) ytitle("Total 
+> Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlabel(,la
+> bsize(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicle_barr
+> ier_Permanent"))
+option solid not allowed
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lwidth(2pt) lcolor(red)) ytitle("
+> Total Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlab
+> el(,labsize(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicl
+> e_barrier_Permanent"))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lwidth(3pt) lcolor(red)) ytitle("
+> Total Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlab
+> el(,labsize(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicl
+> e_barrier_Permanent"))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. 
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , solid(3pt) lcolor(red)) ytitle("T
+> otal Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlabe
+> l(,labsize(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicle
+> _barrier_Permanent"))
+option solid() not allowed
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lwidth() lcolor(red)) ytitle("Tot
+> al Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) xlabel(
+> ,labsize(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicle_b
+> arrier_Permanent"))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red)) ytit
+> le("Total Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) 
+> xlabel(,labsize(2.3)) legend(lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "ve
+> hicle_barrier_Permanent"))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red)) ytit
+> le("Total Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) 
+> xlabel(,labsize(2.3)) legend((pos(5) lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") l
+> ab(3 "vehicle_barrier_Permanent"))
+parentheses do not balance
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red)) ytit
+> le("Total Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) 
+> xlabel(,labsize(2.3)) legend( pos(5) lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") l
+> ab(3 "vehicle_barrier_Permanent"))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red)) ytit
+> le("Total Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) 
+> xlabel(,labsize(2.3)) legend( pos(2) lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") l
+> ab(3 "vehicle_barrier_Permanent"))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red)) ytit
+> le("Total Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) 
+> xlabel(,labsize(2.3)) legend( pos(4) lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") l
+> ab(3 "vehicle_barrier_Permanent"))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red)) ytit
+> le("Total Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) 
+> xlabel(,labsize(2.3)) legend( pos(6) lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") l
+> ab(3 "vehicle_barrier_Permanent"))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red)) ytit
+> le("Total Miles Constructed") title("Cumulative barrier construction by type") ylabel(,labsize(2.3)) 
+> xlabel(,labsize(2.3)) legend( pos(6) lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") l
+> ab(3 "vehicle_barrier_Permanent"))
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. 
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lwidth(1pt) lcolor(red)) by(sector_name ,  
+> note("") ) ylabel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab
+> (2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) 
+
+. 
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lpattern(solid) lcolor(red)) by(sector_name
+>  ,  note("") ) ylabel(,labsize(1.5)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border")
+>  lab(2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid dot dash ) xline(2006 , lpattern(solid) lcolor(red)) by(sector_name
+>  ,  note("") ) ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") l
+> ab(2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red)) by(s
+> ector_name ,  note("") ) ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total 
+> Border") lab(2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*
+> 0.7)) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid shortdash_dot(1) dash ) xline(2006 , lpattern(solid) lcolor(red)) b
+> y(sector_name ,  note("") ) ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Tot
+> al Border") lab(2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") siz
+> e(*0.7)) 
+option(s) shortdash_dot(1) not allowed
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xt
+> itle("Year") sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red)) by(s
+> ector_name ,  note("") ) ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total 
+> Border") lab(2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*
+> 0.7)) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, yt
+> itle("Total Miles Constructed") xtitle("Year") sort lpattern( solid shortdash_dot dash ) xline(2006 ,
+>  lpattern(solid) lcolor(red)) by(sector_name ,  note("") ) ylabel(,labsize(2)) xlabel(,labsize(2.6)) 
+> legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Veh
+> icle Barrier/Total Border") size(*0.7)) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, yt
+> itle("Total Miles Constructed") xtitle("Year") title("County-level ratio of barrier to US-Mexico bord
+> er by barrier type") sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(re
+> d)) by(sector_name ,  note("") ) ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrie
+> r/Total Border") lab(2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border"
+> ) size(*0.7)) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, yt
+> itle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid
+> ) lcolor(red)) by(sector_name ,  note("") ) ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "T
+> otal Barrier/Total Border") lab(2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/To
+> tal Border") size(*0.7)) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name ,  note("") )  ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash
+>  ) xline(2006 , lpattern(solid) lcolor(red))  ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 
+> "Total Barrier/Total Border") lab(2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/
+> Total Border") size(*0.7)) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name ,  note("") )  ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash
+>  )  ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp 
+> Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(2006 , lp
+> attern(solid) lcolor(red))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name ,  note("") )  ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash
+>  )  ylabel(,labsize(2)) ysize(5) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab
+> (2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(
+> 2006 , lpattern(solid) lcolor(red))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. 
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name ,  note("") )  ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash
+>  )  ylabel(,labsize(2)) ysize(1) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab
+> (2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(
+> 2006 , lpattern(solid) lcolor(red))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name ,  note("") )  ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash
+>  )  ylabel(,labsize(2)) ysize(3) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab
+> (2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(
+> 2006 , lpattern(solid) lcolor(red))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name ,  note("") )  ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash
+>  )  ylabel(,labsize(2)) ysize(4) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab
+> (2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(
+> 2006 , lpattern(solid) lcolor(red))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name ,  note("") )  ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash
+>  )  ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp 
+> Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(2006 , lp
+> attern(solid) lcolor(red))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name , size(*0.7)  note("") )  ytitle("Total Miles Constructed") sort lpattern( solid shortda
+> sh_dot dash )  ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") l
+> ab(2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xlin
+> e(2006 , lpattern(solid) lcolor(red))
+option size() not allowed
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name , size(0.7)  note("") )  ytitle("Total Miles Constructed") sort lpattern( solid shortdas
+> h_dot dash )  ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") la
+> b(2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline
+> (2006 , lpattern(solid) lcolor(red))
+option size() not allowed
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name , note("d") )  ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash
+>  )  ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp 
+> Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(2006 , lp
+> attern(solid) lcolor(red))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name(size(0.8)) , note("") )  ytitle("Total Miles Constructed") sort lpattern( solid shortdas
+> h_dot dash )  ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") la
+> b(2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline
+> (2006 , lpattern(solid) lcolor(red))
+factor-variable and time-series operators not allowed
+r(101);
+
+end of do-file
+
+r(101);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name , note("") )  ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash 
+> )  ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp V
+> ehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(2006 , lpa
+> ttern(solid) lcolor(red))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red))  xla
+> bel(,labsize(2.3)) ytitle("Total Miles Constructed") ylabel(,labsize(2.3)) legend( pos(6) lab(1 "Pede
+> strian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicle_barrier_Permanent")) title("Cumula
+> tive barrier construction by type")
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red))  xla
+> bel(,labsize(2.3)) ytitle("Total Miles Constructed") ylabel(,labsize(2.3)) legend( pos(6) lab(1 "Pede
+> strian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicle_barrier_Permanent")) title("Cumula
+> tive barrier construction by type")
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name , note("") size(2) )   ytitle("Total Miles Constructed") sort lpattern( solid shortdash_
+> dot dash )  ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(
+> 2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(2
+> 006 , lpattern(solid) lcolor(red))
+option size() not allowed
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name , title("Average hourly wage, 1988, women aged 34-46", span) note("")  )   ytitle("Total
+>  Miles Constructed") sort lpattern( solid shortdash_dot dash )  ylabel(,labsize(2)) xlabel(,labsize(2
+> .6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp Vehicle Barrier/Total Border") lab(3 "Per
+> m Vehicle Barrier/Total Border") size(*0.7)) xline(2006 , lpattern(solid) lcolor(red))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name , title("County-level ratio of barrier to US-Mexico border by barrier type", span) note(
+> "")  )   ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash )  ylabel(,labsize
+> (2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp Vehicle Barrier/Tot
+> al Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(2006 , lpattern(solid) lcolo
+> r(red))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name , title("County-level ratio of barrier to US-Mexico border by barrier type", span) note(
+> "")  )   ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash ) xtitle("Year")  
+> ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp Vehi
+> cle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(2006 , lpatte
+> rn(solid) lcolor(red)) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name , title("County-level ratio of barrier to US-Mexico border by barrier type", span) note(
+> "")  )   ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash ) xtitle("Year")  
+> ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp Vehi
+> cle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(2006 , lpatte
+> rn(solid) lcolor(red)) 
+
+. 
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+end of do-file
+
+. br
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. 
+. 
+. 
+.         
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0 ,  ylabel(,labsize(2.5)) xlabel(,labsize(2.6)) legend(s
+> ize(*0.7)) ytitle("Deaths")xtitle("Year") 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. 
+.         
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 1 ,  ylabel(,labsize(2.5)) xlabel(,labsize(2.6)) legend(s
+> ize(*0.7)) ytitle("Deaths")xtitle("Year") 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(2.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(lab(1 " Fence 0 ") l
+> ab(2 " Fence 1 "))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(2.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(lab(1 " Fence 0 ") l
+> ab(2 " Fence 1 "))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(2.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(pos(6) lab(1 " Fence
+>  0 ") lab(2 " Fence 1 "))
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(2.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(pos(6) lab(1 " Fence
+>  0 ") lab(2 " Fence 1 ") size(*0.9) )
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. 
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(2.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(pos(6) lab(1 " Fence
+>  0 ") lab(2 " Fence 1 ") size(*1.5) )
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         twoway line death100000 year if fence == 0 ||line death100000 year if fence == 1 ,  ylabel(,l
+> absize(2.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths x 10000 Apprehensions") xtitle("
+> Year") legend(pos(6) lab(1 " Fence 0 ") lab(2 " Fence 1 ") size(*1.5) )
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph" 
+
+.         graph export "${F}\Figura_N°4_total.png" , replace 
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_total.png written in PN
+> G format)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(2.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(pos(6) lab(1 " Fence
+>  0 ") lab(2 " Fence 1 ") size(*1.5) )
+
+. 
+.         
+.         graph export "${F}\Figura_N°4_1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_1.png written in PNG fo
+> rmat)
+
+.         graph save Figura_N°4_1 , replace 
+(file Figura_N°4_1.gph saved)
+
+. 
+.         twoway line death100000 year if fence == 0 ||line death100000 year if fence == 1 ,  ylabel(,l
+> absize(2.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths x 10000 Apprehensions") xtitle("
+> Year") legend(pos(6) lab(1 " Fence 0 ") lab(2 " Fence 1 ") size(*1.5) )
+
+.         
+.         graph export "${F}\Figura_N°4_2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_2.png written in PNG fo
+> rmat)
+
+.         graph save Figura_N°4_2 , replace 
+(file Figura_N°4_2.gph saved)
+
+. 
+. *Unir los datos*
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph" 
+
+.         graph export "${F}\Figura_N°4_total.png" , replace 
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_total.png written in PN
+> G format)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph" title("Trends in crime rates across treat
+> ment and control counties")
+title("Trends in crime rates across treatment and control counties") is not a memory graph
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(2.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(pos(6) lab(1 " Fence
+>  0 ") lab(2 " Fence 1 ") size(*1.5) )
+
+. 
+.         
+.         graph export "${F}\Figura_N°4_1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_1.png written in PNG fo
+> rmat)
+
+.         graph save Figura_N°4_1 , replace 
+(file Figura_N°4_1.gph saved)
+
+. 
+.         twoway line death100000 year if fence == 0 ||line death100000 year if fence == 1 ,  ylabel(,l
+> absize(2.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths x 10000 Apprehensions") xtitle("
+> Year") legend(pos(6) lab(1 " Fence 0 ") lab(2 " Fence 1 ") size(*1.5) )
+
+.         
+.         graph export "${F}\Figura_N°4_2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_2.png written in PNG fo
+> rmat)
+
+.         graph save Figura_N°4_2 , replace 
+(file Figura_N°4_2.gph saved)
+
+. 
+. *Unir los datos*
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph" title("Trends in crime rates across treat
+> ment and control counties")
+title("Trends in crime rates across treatment and control counties") is not a memory graph
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph", title("Trends in crime rates across trea
+> tment and control counties")
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph", title("Trends in crime rates across trea
+> tment and control counties") imargin(0 0 0 0)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph", title("Trends in crime rates across trea
+> tment and control counties") imargin(0 0 0 0) grc1leg
+option grc1leg not allowed
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph", title("Trends in crime rates across trea
+> tment and control counties") imargin(0 0 0 0) grc2leg
+option grc2leg not allowed
+r(198);
+
+end of do-file
+
+r(198);
+
+. net install grc1leg.pkg
+file http://digital.cgdev.org/doc/stata/MO/Misc/grc1leg.pkg not found
+could not load grc1leg.pkg from http://digital.cgdev.org/doc/stata/MO/Misc/
+r(601);
+
+. install grc1leg.pkg
+command install is unrecognized
+r(199);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph", title("Trends in crime rates across trea
+> tment and control counties" by()) imargin(0 0 0 0) grc2leg
+option grc2leg not allowed
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph", title("Trends in crime rates across trea
+> tment and control counties" by()) imargin(0 0 0 0) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph", by(var,title("Trends in crime rates acro
+> ss treatment and control counties" ) 
+parentheses do not balance
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph", by(var,title("Trends in crime rates acro
+> ss treatment and control counties" )) 
+variable var not found
+r(111);
+
+end of do-file
+
+r(111);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph", by("",title("Trends in crime rates acros
+> s treatment and control counties" )) 
+" invalid name
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph", by(fence,title("Trends in crime rates ac
+> ross treatment and control counties" )) 
+if not allowed
+r(101);
+
+end of do-file
+
+r(101);
+
+. net install grc1leg
+file http://digital.cgdev.org/doc/stata/MO/Misc/grc1leg.pkg not found
+could not load grc1leg.pkg from http://digital.cgdev.org/doc/stata/MO/Misc/
+r(601);
+
+. net describe grc1leg, from(http://www.stata.com/users/vwiggins)
+
+-------------------------------------------------------------------------------------------------------
+package grc1leg from http://www.stata.com/users/vwiggins
+-------------------------------------------------------------------------------------------------------
+
+TITLE
+      grc1leg.  Combine graphs into one graph with a common legend.
+
+DESCRIPTION/AUTHOR(S)
+      Program by Vince Wiggins, StataCorp <vwiggins@stata.com>.
+      Statalist distribution, 16 June 2003.
+      
+      Exactly like -graph combine- but shows a single common legend for all
+      combined graphs.
+      
+      Distribution-Date: 02jun2010
+
+INSTALLATION FILES                              (type net install grc1leg)
+      grc1leg/grc1leg.ado
+      grc1leg/grc1leg.hlp
+-------------------------------------------------------------------------------------------------------
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph", title("Trends in crime rates across trea
+> tment and control counties" ) grc1leg
+option grc1leg not allowed
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", title("Trends in crime rates across trea
+> tment and control counties" ) 
+grc1leggraph_g.new "Figura_N°4_1.gph" "Figura_N°4_2.gph", title("Trends in crime rates across
+    treatment and control counties" ): class member function not found
+r(4023);
+
+end of do-file
+
+r(4023);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph"
+command grc1leg is unrecognized
+r(199);
+
+end of do-file
+
+r(199);
+
+. help grc1leg
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         net install grc1leg, from (http://www.stata.com/users/vwiggins)
+checking grc1leg consistency and verifying not already installed...
+installing into C:\Users\MIGUEL\ado\plus\...
+installation complete.
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom(graph2)
+ not found in graph name list
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         net install grc1leg, from (http://www.stata.com/users/vwiggins)
+checking grc1leg consistency and verifying not already installed...
+all files already exist and are up to date.
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph")
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph")
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph") title("Trends i
+> n crime rates across treatment and control counties" ) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph") title("Trends i
+> n crime rates across treatment and control counties" ) 
+
+.         legend(subtitle("Legend")) 
+command legend is unrecognized
+r(199);
+
+end of do-file
+
+r(199);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph",subtitle("Legend
+> ")) title("Trends in crime rates across treatment and control counties" ) 
+invalid syntax
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph") title("Trends i
+> n crime rates across treatment and control counties" ) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(3.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(pos(6) lab(1 " Fence
+>  0 ") lab(2 " Fence 1 ") size(*1.5) )
+
+. 
+.         
+.         graph export "${F}\Figura_N°4_1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_1.png written in PNG fo
+> rmat)
+
+.         graph save Figura_N°4_1 , replace 
+(file Figura_N°4_1.gph saved)
+
+. 
+.         twoway line death100000 year if fence == 0 ||line death100000 year if fence == 1 ,  ylabel(,l
+> absize(3.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths x 10000 Apprehensions") xtitle("
+> Year") legend(pos(6) lab(1 " Fence 0 ") lab(2 " Fence 1 ") size(*1.5) )
+
+.         
+.         graph export "${F}\Figura_N°4_2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_2.png written in PNG fo
+> rmat)
+
+.         graph save Figura_N°4_2 , replace 
+(file Figura_N°4_2.gph saved)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph") title("Trends i
+> n crime rates across treatment and control counties" ) 
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legend(subtitle("Legend")) legendfrom("Figura_
+> N°4_1.gph") title("Trends in crime rates across treatment and control counties" ) 
+invalid syntax
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph" subtitle("Legend
+> ") ) title("Trends in crime rates across treatment and control counties" ) 
+invalid syntax
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph" subtitle("Legend
+> ") ) title("Trends in crime rates across treatment and control counties" ) 
+invalid syntax
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph") title("Trends i
+> n crime rates across treatment and control counties" ) 
+
+.         graph export "${F}\Figura_N°5_total.png" , replace 
+(note: file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°5_total.png not fou
+> nd)
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°5_total.png written in PN
+> G format)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(3.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(pos(6) lab(1 " Fence
+>  0 ") lab(2 " Fence 1 ") size(*1.5)  subtitle("FENCE") )
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(3.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(pos(6) lab(1 " Fence
+>  0 ") lab(2 " Fence 1 ") size(*1.5)  subtitle("FENCE") )
+
+. 
+.         
+.         graph export "${F}\Figura_N°4_1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_1.png written in PNG fo
+> rmat)
+
+.         graph save Figura_N°4_1 , replace 
+(file Figura_N°4_1.gph saved)
+
+. 
+.         twoway line death100000 year if fence == 0 ||line death100000 year if fence == 1 ,  ylabel(,l
+> absize(3.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths x 10000 Apprehensions") xtitle("
+> Year") legend(pos(6) lab(1 " Fence 0 ") lab(2 " Fence 1 ") size(*1.5) subtitle("FENCE")) ) 
+) is not a twoway plot type
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph") title("Trends i
+> n crime rates across treatment and control counties" ) 
+
+.         graph export "${F}\Figura_N°5_total.png" , replace 
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°5_total.png written in PN
+> G format)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph") title("Trends i
+> n crime rates across treatment and control counties" ) 
+
+.         graph export "${F}\Figura_N°5_total.png" , replace 
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°5_total.png written in PN
+> G format)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         graph export "${F}\Figura_N°1.pdf", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.pdf written in PDF form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(year)
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         *label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
+.         *label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+. 
+.         twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xti
+> tle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red))  xla
+> bel(,labsize(2.3)) ytitle("Total Miles Constructed") ylabel(,labsize(2.3)) legend( pos(6) lab(1 "Pede
+> strian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicle_barrier_Permanent")) title("Cumula
+> tive barrier construction by type")
+(note:  named style sky not found in class color, default attributes used)
+(note:  named style sky not found in class color, default attributes used)
+(note:  named style sky not found in class color, default attributes used)
+(note:  named style sky not found in class color, default attributes used)
+(note:  named style sky not found in class color, default attributes used)
+(note:  named style reddish not found in class color, default attributes used)
+
+. 
+.         graph export "${F}\Figura_N°1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.png written in PNG form
+> at)
+
+.         graph export "${F}\Figura_N°1.pdf", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°1.pdf written in PDF form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+. 
+.         collapse (sum) total_primary total_secondary total_tertiary total_p_vehicle total_t_vehicle ,
+>  by(sector_name year )
+
+. 
+.         rename total_p_vehicle vehicle_barrier_Permanent , replace 
+
+.         rename total_t_vehicle  vehicle_barrier_Temporary , replace 
+
+. 
+.         **label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
+.         **label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+. 
+.         egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+
+.         label variable Pedestrian_Barrier "Total Barrier/Total Border"
+
+. 
+.         twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by
+> (sector_name , title("County-level ratio of barrier to US-Mexico border by barrier type", span) note(
+> "")  )   ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash ) xtitle("Year")  
+> ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp Vehi
+> cle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(2006 , lpatte
+> rn(solid) lcolor(red)) 
+
+. 
+. 
+.         graph export "${F}\Figura_N°2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.png written in PNG form
+> at)
+
+.         graph export "${F}\Figura_N°2.pdf", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°2.pdf written in PDF form
+> at)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         use border_data_1992-2019_11_5, clear
+
+.         keep year fence deaths apprehensions
+
+.         collapse  (sum) apprehensions deaths, by( year fence)
+
+.         sort year fence
+
+.         gen death100000 = (deaths/ apprehensions) * 100000
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(3.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(pos(6) lab(1 " Fence
+>  0 ") lab(2 " Fence 1 ") size(*1.5)  subtitle("FENCE") )
+
+. 
+.         
+.         graph export "${F}\Figura_N°4_1.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_1.png written in PNG fo
+> rmat)
+
+.         graph export "${F}\Figura_N°4_1.pdf", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_1.pdf written in PDF fo
+> rmat)
+
+.         graph save Figura_N°4_1 , replace 
+(file Figura_N°4_1.gph saved)
+
+. 
+.         twoway line death100000 year if fence == 0 ||line death100000 year if fence == 1 ,  ylabel(,l
+> absize(3.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths x 10000 Apprehensions") xtitle("
+> Year") legend(pos(6) lab(1 " Fence 0 ") lab(2 " Fence 1 ") size(*1.5) subtitle("FENCE")) ) 
+) is not a twoway plot type
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+. 
+.         twoway line death100000 year if fence == 0 ||line death100000 year if fence == 1 ,  ylabel(,l
+> absize(3.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths x 10000 Apprehensions") xtitle("
+> Year") legend(pos(6) lab(1 " Fence 0 ") lab(2 " Fence 1 ") size(*1.5) subtitle("FENCE")) ) 
+) is not a twoway plot type
+r(198);
+
+end of do-file
+
+r(198);
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(3.5)
+> ) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(pos(6) lab(1 " Fence
+>  0 ") lab(2 " Fence 1 ") size(*1.5)  subtitle("FENCE") )
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         twoway line death100000 year if fence == 0 ||line death100000 year if fence == 1 ,  ylabel(,l
+> absize(3.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths x 10000 Apprehensions") xtitle("
+> Year") legend(pos(6) lab(1 " Fence 0 ") lab(2 " Fence 1 ") size(*1.5) subtitle("FENCE") ) 
+
+.         
+.         graph export "${F}\Figura_N°4_2.png", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_2.png written in PNG fo
+> rmat)
+
+.         graph export "${F}\Figura_N°4_2.pdf", replace
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_2.pdf written in PDF fo
+> rmat)
+
+.         graph save Figura_N°4_2 , replace 
+(file Figura_N°4_2.gph saved)
+
+. 
+end of do-file
+
+. do "C:\Users\MIGUEL\AppData\Local\Temp\STD18dc_000000.tmp"
+
+.         grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph") title("Trends i
+> n crime rates across treatment and control counties" ) 
+
+.         graph export "${F}\Figura_N°4_total.png" , replace 
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_total.png written in PN
+> G format)
+
+.         graph export "${F}\Figura_N°4_total.pdf" , replace 
+(file C:\Users\MIGUEL\Documents\GitHub\Immigration_proyect\F_Figures\Figura_N°4_total.pdf written in PD
+> F format)
+
+. 
+end of do-file
+
