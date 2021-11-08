@@ -128,7 +128,7 @@
 
 
 	
-	/* Load stata packages and settings
+	/* Load stata packages and settings for well looking graphs
 * -----------------------------------
   ssc install moremata       , replace 
   ssc install mplotoffset    , replace Produce un diagrama de márgenes con cada trazado desplazado horizontalmente para permitir una visualización más clara .
