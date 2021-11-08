@@ -28,8 +28,20 @@
 		global E "${path}\E_Tables"
 		global F "${path}\F_Figures"
 
-
-
+  *--------------------------------------------------
+    * 1.3 Format in which you want the graphics to appear
+    *--------------------------------------------------  
+	set scheme plotplainblind , permanently
+	* Colors
+		*black
+		*gs10
+		*sky
+		*turquoise
+		*orangebrown
+		*reddish
+		*vermillion
+		*sea
+		*ananas 
 
 ********************************************************************************
 *** PART 2: Cleaning border_data_1992-2019_11_5
@@ -46,15 +58,16 @@
 	rename total_p_vehicle vehicle_barrier_Permanent , replace 
 	rename total_t_vehicle  vehicle_barrier_Temporary , replace 
 
-	*label variable vehicle_barrier_Permanent "vehicle_barrier_Permanent"
-	*label variable vehicle_barrier_Temporary "vehicle_barrier_Temporary"
+	label variable vehicle_barrier_Permanent "Cumulative Vehicle Barrier - Permanent"
+	label variable vehicle_barrier_Temporary "Cumulative Vehicle Barrier - Temporary"
 
 	egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
+	label variable Pedestrian_Barrier "Cumulative Pedestrian Barrier - Total"
 
-	twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xtitle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red))  xlabel(,labsize(2.3)) ytitle("Total Miles Constructed") ylabel(,labsize(2.3)) legend( pos(6) lab(1 "Pedestrian_Barrier") lab(2 "vehicle_barrier_Temporary") lab(3 "vehicle_barrier_Permanent")) title("Cumulative barrier construction by type")
+	twoway line Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, xtitle("Year")  sort lpattern( solid shortdash_dot dash ) xline(2006 , lpattern(solid) lcolor(red))  xlabel(,labsize(2.3)) ytitle("Total Miles Constructed") ylabel(,labsize(2.3)) legend( pos(6) lab(1 "Cumulative Pedestrian Barrier - Total") lab(2 "Cumulative Vehicle Barrier - Temporary") lab(3 "Cumulative Vehicle Barrier - Permanent")) title("Cumulative barrier construction by type") lcolor(black gs10 black )
 
-	graph export "${F}\Figura_N°1.png", replace
-	graph export "${F}\Figura_N°1.pdf", replace
+	graph export "${F}\figura_N1.png", replace
+	graph export "${F}\figura_N1.pdf", replace
 
 
 *** FIGURE N°2 ***
@@ -66,18 +79,20 @@
 	rename total_p_vehicle vehicle_barrier_Permanent , replace 
 	rename total_t_vehicle  vehicle_barrier_Temporary , replace 
 
-	**label variable vehicle_barrier_Permanent "Perm Vehicle Barrier/Total Border"
-	**label variable vehicle_barrier_Temporary "Temp Vehicle Barrier/Total Border"
+	label variable vehicle_barrier_Permanent "Cumulative Vehicle Barrier - Permanent"
+	label variable vehicle_barrier_Temporary "Cumulative Vehicle Barrier - Temporary"
+	
 
 	egen Pedestrian_Barrier = rowtotal(total_primary total_secondary total_tertiary )
-	label variable Pedestrian_Barrier "Total Barrier/Total Border"
+	label variable Pedestrian_Barrier "Cumulative Pedestrian barrier - Total"
 
-	twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by(sector_name , title("County-level ratio of barrier to US-Mexico border by barrier type", span) note("")  )   ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash ) xtitle("Year")  ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Total Barrier/Total Border") lab(2 "Temp Vehicle Barrier/Total Border") lab(3 "Perm Vehicle Barrier/Total Border") size(*0.7)) xline(2006 , lpattern(solid) lcolor(red)) 
+	twoway line  Pedestrian_Barrier  vehicle_barrier_Temporary vehicle_barrier_Permanent year, by(sector_name , title("Sector-level barrier built on the US-Mexico border , by barrier type (miles)", span) yrescale note("")  )  ytitle("Total Miles Constructed") sort lpattern( solid shortdash_dot dash ) xtitle("Year")  ylabel(,labsize(2)) xlabel(,labsize(2.6)) legend(lab(1 "Cumulative Pedestrian Barrier - Total") lab(2 "Cumulative Vehicle Barrier - Temporary") lab(3 "Cumulative Vehicle Barrier - Permanent") size(*0.7)) xline(2006 , lpattern(solid) lcolor(red)) lcolor(black gs10 black ) 
 
 
-	graph export "${F}\Figura_N°2.png", replace
-	graph export "${F}\Figura_N°2.pdf", replace
 
+	graph export "${F}\figura_N2.png", replace
+	graph export "${F}\figura_N2.pdf", replace
+	
 
 *** FIGURE N°4 ***
 
@@ -85,19 +100,19 @@
 	keep year fence deaths apprehensions
 	collapse  (sum) apprehensions deaths, by( year fence)
 	sort year fence
-	gen death100000 = (deaths/ apprehensions) * 100000
+	gen death1000 = (deaths/ apprehensions) * 1000
 	twoway line deaths year if fence == 0||line deaths year if fence == 1 ,  ylabel(,labsize(3.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths")xtitle("Year") legend(pos(6) lab(1 " Fence 0 ") lab(2 " Fence 1 ") size(*1.5)  subtitle("FENCE") )
 
 	
-	graph export "${F}\Figura_N°4_1.png", replace
-	graph export "${F}\Figura_N°4_1.pdf", replace
-	graph save Figura_N°4_1 , replace 
+	graph export "${F}\figura_N4_1.png", replace
+	graph export "${F}\figura_N4_1.pdf", replace
+	graph save figura_N4_1 , replace 
 
-	twoway line death100000 year if fence == 0 ||line death100000 year if fence == 1 ,  ylabel(,labsize(3.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths x 10000 Apprehensions") xtitle("Year") legend(pos(6) lab(1 " Fence 0 ") lab(2 " Fence 1 ") size(*1.5) subtitle("FENCE") ) 
+	twoway line death1000 year if fence == 0 ||line death1000 year if fence == 1 ,  ylabel(,labsize(3.5)) xlabel(,labsize(2.6)) legend(size(*0.7)) ytitle("Deaths x 1000 Apprehensions") xtitle("Year") legend(pos(6) lab(1 " Fence 0 ") lab(2 " Fence 1 ") size(*1.5) subtitle("FENCE") ) 
 	
-	graph export "${F}\Figura_N°4_2.png", replace
-	graph export "${F}\Figura_N°4_2.pdf", replace
-	graph save Figura_N°4_2 , replace 
+	graph export "${F}\figura_N4_2.png", replace
+	graph export "${F}\figura_N4_2.pdf", replace
+	graph save figura_N4_2 , replace 
 
 *UNION WITH combine*
 	**graph combine "Figura_N°4_1.gph" "Figura_N°4_2.gph", title("Trends in crime rates across treatment and control counties" )
@@ -106,10 +121,12 @@
 *UNION WITH grc1leg*
 	
 	**net install grc1leg, from (http://www.stata.com/users/vwiggins) package to choose one of the two legends of the graphics
-	grc1leg "Figura_N°4_1.gph" "Figura_N°4_2.gph", legendfrom("Figura_N°4_1.gph") title("Trends in crime rates across treatment and control counties" ) 
-	graph export "${F}\Figura_N°4_total.png" , replace 
-	graph export "${F}\Figura_N°4_total.pdf" , replace 
+	grc1leg "figura_N4_1.gph" "figura_N4_2.gph", legendfrom("figura_N4_1.gph") title("Trends in Deaths and Deaths per 1000 Apprehensions") 
+	graph export "${F}\figura_N4_total.png" , replace 
+	graph export "${F}\figura_N4_total.pdf" , replace 
 	
+
+
 	
 	/* Load stata packages and settings
 * -----------------------------------
@@ -152,12 +169,7 @@
   set maxvar  32767        , permanently
   
   graph set window fontface "Garamond"
-
-
-
-
-
-
-
+  
+  
 
 
